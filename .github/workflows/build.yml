@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 0
 
       - name: Get tor ip list
-        run: curl -L ttps://www.dan.me.uk/torlist/?full -o torlist
+        run: curl -L https://www.dan.me.uk/torlist/?full -o torlist
 
       - name: Add cidr prefix
         run: awk '/\./ {print $0"/32"} !/\./ {print $0"/128"}' torlist > torcidr.txt
