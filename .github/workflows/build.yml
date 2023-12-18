@@ -33,3 +33,4 @@ jobs:
           file_glob: true
           file: torcidr.txt
           tag: latest
+          overwrite: true
